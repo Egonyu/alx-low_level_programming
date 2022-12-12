@@ -5,7 +5,7 @@
  *
  *Return: Always 0 (success)
  */
-int mainn(void)
+int main(void)
 
 {
 	int num1, num2;
