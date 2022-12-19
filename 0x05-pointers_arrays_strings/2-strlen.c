@@ -1,7 +1,7 @@
 #include "dan.h"
 
 /**
- *int _strlen - program that return legnth of a string
+ *_strlen - program that return legnth of a string
  *@s: string to be measured
  *Return: length
  */
