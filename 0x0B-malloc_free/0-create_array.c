@@ -1,18 +1,30 @@
 #include <stdlib.h>
-#include "main.h"
-/**
- * malloc_checked - allocates memory using malloc
- * @b: number of bytes to allocates
- *
- * Return: a pointer to the allocated memory.
- * if malloc fails, status value is equal to 98.
- */
-void *malloc_checked(unsigned int b)
-{
-	char *p;
 
-	p = malloc(b);
-	if (p == NULL)
-		exit(98);
-	return (p);
+/**
+ * create_array - create an array of chars
+ * @size: to be allocated
+ * @c: character to inialize array
+ *
+ *Return: a pointer to the array, NULL if it fails
+ */
+char *create_array(unsigned int size, char c)
+{
+	char *arr;
+	unsigned int count = 0;
+
+	if (size == 0)
+		return (NULL);
+
+	arr = (char *)(malloc(size * sizeof(char)));
+
+	if (!arr)
+		return (NULL);
+
+	while (count < size)
+	{
+		arr[count] = c;
+		count++;
+	}
+
+	return (arr);
 }
